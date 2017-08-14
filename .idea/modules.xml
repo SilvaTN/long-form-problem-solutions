@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CalendarComplete/CalendarComplete.iml" filepath="$PROJECT_DIR$/CalendarComplete/CalendarComplete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CallGraphSolutions/CallGraphSolutions.iml" filepath="$PROJECT_DIR$/CallGraphSolutions/CallGraphSolutions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FitLifeGymChainComplete/FitLifeGymChainComplete.iml" filepath="$PROJECT_DIR$/FitLifeGymChainComplete/FitLifeGymChainComplete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TranscriptComplete/TranscriptComplete.iml" filepath="$PROJECT_DIR$/TranscriptComplete/TranscriptComplete.iml" />
+    </modules>
+  </component>
+</project>
