@@ -1,7 +1,6 @@
 package ui;
 
 import model.GymChain;
-import model.cardio.CardioMachine;
 import model.cardio.Elliptical;
 import model.cardio.IndoorBike;
 import model.cardio.Treadmill;
@@ -9,11 +8,12 @@ import model.gym.DeluxeGym;
 import model.gym.FitnessClass;
 import model.gym.Gym;
 import model.members.Member;
-import model.weights.*;
+import model.weights.Barbell;
+import model.weights.Dumbbell;
+import model.weights.Plate;
+import model.weights.WeightMachine;
 
-import static model.members.MembershipLevel.BASIC;
-import static model.members.MembershipLevel.CLASSES;
-import static model.members.MembershipLevel.DELUXE;
+import static model.members.MembershipLevel.*;
 
 public class GymChainInfo {
 
@@ -27,6 +27,9 @@ public class GymChainInfo {
     public static final String YOUR_GYM_NAME = "UBC";
     //TODO 1: assign a different value to the constant below
     public static final String YOUR_MEMBER_NAME = "Sazi";
+
+    public static final String ELLITE_FOUR = "Ellite Four";
+    public static final String ASH_KETCHUP = "Ash Ketchup";
 
 
     public static void main(String[] args) {
@@ -55,6 +58,10 @@ public class GymChainInfo {
         //TODO 3: uncomment these 2 lines:
         m4.setMembershipLevel(DELUXE);
         chain.signUpMember(m4);
+
+        Member m5 = new Member(ASH_KETCHUP);
+        m5.setMembershipLevel(BASIC);
+        chain.signUpMember(m5);
     }
 
     private static void loadGyms(GymChain chain){
@@ -84,6 +91,10 @@ public class GymChainInfo {
         initializeGym0(myGym);
 //        TODO 4: add your new gym's variable name and uncomment:
         chain.addGym(myGym);
+
+        Gym g5 = new Gym(ELLITE_FOUR);
+        initializeGym5(g5);
+        chain.addGym(g5);
     }
 
 
@@ -96,6 +107,13 @@ public class GymChainInfo {
 
 //        NOTE: the Barbell constructor takes one parameter, an int
 //        NOTE: the IndoorBike constructor doesn't take any parameters
+    }
+
+    private static void initializeGym5(Gym gym){
+        Barbell bar = new Barbell(80);
+        IndoorBike bike = new IndoorBike();
+        gym.setHasPool(true);
+        gym.addWeight(bar);
     }
 
     private static void initializeGym1(Gym gym){

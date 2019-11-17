@@ -18,6 +18,7 @@ public class InfoManager {
     //    TODO 5: write a command shortcut for your gym's name between the quotes below.
     //    The command MUST be in lowercase.
     private static final String YOUR_GYM_COMMAND = "ubc";
+    private static final String ELLITE_FOUR_COMMAND = "ellite";
 
     private static final String MEMBERS_COMMAND = "members";
     private static final String SUNNY_GROVE_COMMAND = "sunny";
@@ -60,6 +61,7 @@ public class InfoManager {
         System.out.println("Enter '"+ PALM_LAKE_COMMAND + "' for FitLife " + PALM_LAKE_GYM_NAME);
 //        TODO 5: uncomment the next method call:
         System.out.println("Enter '" + YOUR_GYM_COMMAND + "' for Fitlife " + YOUR_GYM_NAME);
+        System.out.println("Enter '" + ELLITE_FOUR_COMMAND + "' for FitLife " + ELLITE_FOUR);
         System.out.println("To quit at any time, enter '"+ QUIT_COMMAND +"'.");
     }
 
@@ -215,6 +217,9 @@ public class InfoManager {
                     break;
                 case YOUR_GYM_COMMAND:
                     printGymInfo(chain.lookupGymByName(YOUR_GYM_NAME));
+                    break;
+                case ELLITE_FOUR_COMMAND:
+                    printGymInfo(chain.lookupGymByName(ELLITE_FOUR));
                     break;
                 case MEMBERS_COMMAND:
                     printMemberInfo();
